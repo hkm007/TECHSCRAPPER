@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 import requests
 requests.packages.urllib3.disable_warnings()
+news_list = []
 params = {}
 from bs4 import BeautifulSoup
 
@@ -18,15 +19,14 @@ def scrape():
     
     posts = soup.find_all('h3', {'class':'latest-head'})   
 
-    labels = ['one','two','three','four','five','six','seven','eight','nine','ten','eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','nineteen','twenty','twentyone','twentytwo','twentythree','twentyfour','twentyfive','twentysix','twentyseven','twentyeight','twentynine','thirty','thirtyone','thirtytwo','thirtythree','thirtyfour']
-    j =0
     for i in posts:
     	news = i.find('a')
-    	params.update({labels[j]: news.text})
-    	j+=1
-    	#print(news.text)
+    	news_list.append(news.text)
+    	
+    params = {'my_news':news_list}
+    return params
 
-scrape()
+params = scrape()
 
 def index(request):
     return render(request, 'index.html', params)

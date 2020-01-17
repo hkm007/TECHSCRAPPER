@@ -10,160 +10,18 @@
     <title>TECHSCRAPPER</title>
   </head>
   <body>
-    <h1 class="display-1 text-primary" align="center">TECHSCRAPPER</h1> <br><br><br>
-
-    <div class="container">
+    <div class ="container my-3" style="text-align:center;">
+		<h1 class="display-1 text-primary">TECHSCRAPPER</h1> <br><br><br>
+	</div>		
+	{% for i in my_news|slice:"0:25"%}
+    <div class="container my-3">
       <div class="card">
   		<div class="card-body">
-    	  {{one}}
+    	  {{i}}
   		</div>
 	  </div>
-
-      <div class="card">
-  		<div class="card-body">
-    	  {{two}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{three}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{four}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{five}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{six}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{seven}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{eight}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{nine}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{ten}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{eleven}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{twelve}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{thirteen}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{fourteen}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{fifteen}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{sixteen}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{seventeen}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{eighteen}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{nineteen}}
-  		</div>
-	  </div>
-
-	  <div class="card">
-  		<div class="card-body">
-    	  {{twenty}}
-  		</div>
-	  </div>
-	  
-	  <div class="card">
-		<div class="card-body">
-		{{twentyone}}
-		</div>
-	  </div>
-
-	  <div class="card">
-		<div class="card-body">
-		{{twentytwo}}
-		</div>
-	  </div>
-
-	  <div class="card">
-		<div class="card-body">
-		{{twentythree}}
-		</div>
-	  </div>
-
-	  <div class="card">
-		<div class="card-body">
-		{{twentyfour}}
-		</div>
-	  </div>
-
-	  <div class="card">
-		<div class="card-body">
-		{{twentyfive}}
-		</div>
-	  </div>
-
-    </div>
+	</div>
+	{% endfor %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
